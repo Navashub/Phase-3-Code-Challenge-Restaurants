@@ -32,3 +32,20 @@ customer2 = Customer("Navas", "Herbert")
 # Test the get_given_name() and get_family_name() methods
 print(customer1.get_given_name())  # Output: Eric
 print(customer1.get_family_name())
+
+# Test the set_given_name() and set_family_name() methods
+customer2.set_given_name("Faith")
+customer2.set_family_name("Muraya")
+print(customer2.get_given_name())  # Faith
+print(customer2.get_family_name())  # Muraya
+
+# Test the get_full_name() method
+print(customer1.get_full_name())  #Eric Smith
+print(customer2.get_full_name())  #Faith Muraya
+
+# Test the get_all_customers() class method
+all_customers = Customer.get_all_customers()
+for customer in all_customers:
+    print(customer.get_full_name())
+
+# Output - Eric Smith and Faith Muraya
